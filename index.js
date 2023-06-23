@@ -1,7 +1,7 @@
 const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
-
+const port = process.env.PORT || 5000;
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -36,5 +36,5 @@ app.get("/", (req, res) => {
 //     });
 // });
 
-// app.listen(4000,()=>console.log(`Servidor online em http://127.0.0.1:4000`));
-console.log(`Servidor online`);
+app.listen(port,()=>console.log(`Servidor online na porta ${port}`));
+

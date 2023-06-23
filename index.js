@@ -9,7 +9,9 @@ app.use(cors());
 app.get("/teste", (req, res) => {
   res.status(200).send({ output: "Tudo funcionando" });
 });
-
+app.get("/", (req, res) => {
+  res.status(200).send({ output: "Tudo funcionando - nova rota na raiz" });
+});
 // const conexao = mysql.createConnection({
 //     host:"127.0.0.1",
 //     user:"root",
@@ -35,3 +37,4 @@ app.get("/teste", (req, res) => {
 // });
 
 // app.listen(4000,()=>console.log(`Servidor online em http://127.0.0.1:4000`));
+console.log(`Servidor online`);
